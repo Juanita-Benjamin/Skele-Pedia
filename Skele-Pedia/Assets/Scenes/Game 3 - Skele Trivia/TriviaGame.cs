@@ -12,6 +12,8 @@ public class TriviaGame : MonoBehaviour
     public Button[] options = new Button[4];
     public Text[] optionsText;
 
+
+    public bool randomCorrectAnswer = true;
     public GameObject correctAnswer;
     public string[] choices = new string[4];
 
@@ -20,7 +22,8 @@ public class TriviaGame : MonoBehaviour
 
     void Start(){
 
-        correctAnswer = GetRandomCorrectAnswer(Bones);
+        if(randomCorrectAnswer==true) //set it, other wise make it what we chose
+            correctAnswer = GetRandomCorrectAnswer(Bones);
         correctAnswer.AddComponent<highLight>();
         correctAnswer.GetComponent<highLight>().hover = false;
         correctAnswer.GetComponent<highLight>().highLightThis();
@@ -58,19 +61,6 @@ public class TriviaGame : MonoBehaviour
 
     void displayCorrect(){
         
-    }
-
-    public void LoadButtons(){
-        for(int i=0;i<options.Length;i++)
-        {
-            options[i].onClick.AddListener(() => OnButtonClick(i+1));
-        }
-    }
-
-    public void OnButtonClick(int id)
-    {
-        Debug.Log(id);
-        clicked = id;
     }
 
     public GameObject GetRandomCorrectAnswer(GameObject[] Bones){
