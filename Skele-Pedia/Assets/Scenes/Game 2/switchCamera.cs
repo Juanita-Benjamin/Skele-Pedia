@@ -1,4 +1,4 @@
-using System.Collections;
+using LOSystem.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
