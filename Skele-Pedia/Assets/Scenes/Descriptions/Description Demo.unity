@@ -321,7 +321,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f83c1f845e783544fa401fdb4fb7f2dc,
         type: 3}
       propertyPath: m_Name
-      value: Skeleton
+      value: Skeleton - CLICK HERE
       objectReference: {fileID: 0}
     - target: {fileID: 2515588545581407849, guid: f83c1f845e783544fa401fdb4fb7f2dc,
         type: 3}
