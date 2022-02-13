@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Skeleton.unity
+- path: Assets/Scenes/Game 3 - Skele Trivia/Skele Trivia.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

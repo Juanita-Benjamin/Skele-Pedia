@@ -52,9 +52,77 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scenes\Game 3 - Skele Trivia\readBones.cs" />
+     <Compile Include="Assets\Scenes\Game 3 - Skele Trivia\offset.cs" />
+     <Compile Include="Assets\Scripts\PlaceSkeleton.cs" />
      <Compile Include="Assets\ExampleAssets\Scripts\AnchorCreator.cs" />
+     <Compile Include="Assets\Scenes\Game 1 - Bone Locating Names Assets\highLight.cs" />
      <Compile Include="Assets\ExampleAssets\Scripts\ARFeatheredPlaneMeshVisualizer.cs" />
+     <Compile Include="Assets\Scripts\Manuel.cs" />
+     <Compile Include="Assets\Scenes\Game 3 - Skele Trivia\TriviaGame.cs" />
+     <Compile Include="Assets\Scenes\Game 3 - Skele Trivia\Answers.cs" />
+     <Compile Include="Assets\Scenes\Game 1 - Bone Locating Names Assets\Game1Runner.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\Lean\READ ME.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\ExampleAssets\Shaders\FeatheredPlaneShader.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\Lean\Third-Party Notices.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -278,7 +346,7 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/HP/Skele-Pedia/Skele-Pedia/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -625,110 +693,152 @@
  <Reference Include="System.Xml.Serialization">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
- <Reference Include="Unity.XR.ARKit">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.XR.ARKit.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VSCode.Editor">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.InteractiveTutorialsFramework">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/UnityEditor.InteractiveTutorialsFramework.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.WindowsMixedReality">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.XR.WindowsMixedReality.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.Management.Editor">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.ARCore.Editor">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.XR.ARCore.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.ARKit.Editor">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.XR.ARKit.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Subsystem.Registration">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="Unity.InteractiveTutorials.Core">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.InteractiveTutorials.Core.dll</HintPath>
- </Reference>
- <Reference Include="Unity.EditorCoroutines.Editor">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.InteractionSubsystems">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.XR.InteractionSubsystems.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.XR.MagicLeap">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/UnityEngine.XR.MagicLeap.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.WindowsMixedReality.Editor">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.XR.WindowsMixedReality.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.XR.MagicLeap">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/UnityEditor.XR.MagicLeap.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.XR.LegacyInputHelpers">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.ARSubsystems.Editor">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.XR.ARSubsystems.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.XR.LegacyInputHelpers">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.Management">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.ARCore">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.XR.ARCore.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.ARSubsystems">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.XR.ARSubsystems.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.ARFoundation.Editor">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.XR.ARFoundation.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.SpatialTracking">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.ARFoundation">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.XR.ARFoundation.dll</HintPath>
- </Reference>
- <Reference Include="Unity.InteractiveTutorials.Core.Scripts">
- <HintPath>D:/Unity Games/Skele-Pedia/Library/ScriptAssemblies/Unity.InteractiveTutorials.Core.Scripts.dll</HintPath>
- </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.XR.ARKit.csproj">
+      <Project>{48cf1dde-5ffc-25b1-8767-890a469306cf}</Project>
+      <Name>Unity.XR.ARKit</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VSCode.Editor.csproj">
+      <Project>{27b65734-7eca-cf75-7901-2c2efc8f8e55}</Project>
+      <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.InteractiveTutorialsFramework.csproj">
+      <Project>{cf041d10-281d-e5fa-f5f4-17f4896891dc}</Project>
+      <Name>UnityEditor.InteractiveTutorialsFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.WindowsMixedReality.csproj">
+      <Project>{1e6af004-083d-8baf-9441-632dc3686e6b}</Project>
+      <Name>Unity.XR.WindowsMixedReality</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{aca4d5ec-8509-cf16-188d-97b8d072754e}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
+      <Project>{275177c7-9c69-8c22-82d4-de9622758721}</Project>
+      <Name>Unity.VisualStudio.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Management.Editor.csproj">
+      <Project>{1cb2ef59-86ab-bdf1-0fc5-aa00fb12661c}</Project>
+      <Name>Unity.XR.Management.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.csproj">
+      <Project>{dea112c2-9466-9d86-e3df-249cab3b8a1e}</Project>
+      <Name>Unity.Timeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{21bc3467-9ac7-d474-3c70-3e1a9b78cd63}</Project>
+      <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.ARCore.Editor.csproj">
+      <Project>{8a599c00-ceba-a7cc-82da-bf36fe767f13}</Project>
+      <Name>Unity.XR.ARCore.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.ARKit.Editor.csproj">
+      <Project>{e5304837-fada-5fc4-8068-727eba6c733c}</Project>
+      <Name>Unity.XR.ARKit.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Subsystem.Registration.csproj">
+      <Project>{882ce98b-d9b0-b073-a200-428e624e40bb}</Project>
+      <Name>Unity.Subsystem.Registration</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{1194d11d-c477-762a-2a9f-64b1f13901eb}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
+      <Project>{a9ab171f-6dbb-72a5-f2d7-7953dbc27acb}</Project>
+      <Name>Unity.PlasticSCM.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Rider.Editor.csproj">
+      <Project>{c3474b85-5bce-b8e5-4ef7-d8cb3e9d7537}</Project>
+      <Name>Unity.Rider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{b38c5864-cc00-0f7c-707e-d1d3f941c138}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.SpatialTracking.csproj">
+      <Project>{63709ec3-2775-3c6b-3e97-40203a2c2d4c}</Project>
+      <Name>UnityEngine.SpatialTracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InteractiveTutorials.Core.csproj">
+      <Project>{460c36b3-1ad1-9628-7f99-a32893eff43f}</Project>
+      <Name>Unity.InteractiveTutorials.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj">
+      <Project>{d9d39b77-7d06-2415-4e2f-9425209762c0}</Project>
+      <Name>Unity.EditorCoroutines.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.InteractionSubsystems.csproj">
+      <Project>{e9b2b65c-5a79-7cd3-b0d1-f57b2ba8b793}</Project>
+      <Name>Unity.XR.InteractionSubsystems</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.XR.MagicLeap.csproj">
+      <Project>{9768a8dc-d2af-e9b5-76dd-c1abbc68791f}</Project>
+      <Name>UnityEngine.XR.MagicLeap</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.WindowsMixedReality.Editor.csproj">
+      <Project>{d0445b0d-cbd4-8d90-a2d6-9c0d654f40d3}</Project>
+      <Name>Unity.XR.WindowsMixedReality.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.XR.MagicLeap.csproj">
+      <Project>{043a78b4-8d2e-b38b-5440-06cc188050d1}</Project>
+      <Name>UnityEditor.XR.MagicLeap</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.XR.LegacyInputHelpers.csproj">
+      <Project>{c36667d1-9393-e07f-34e7-544efe50a290}</Project>
+      <Name>UnityEngine.XR.LegacyInputHelpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.Editor.csproj">
+      <Project>{48249ea4-df73-a82d-af6d-4e9b16a6060f}</Project>
+      <Name>Unity.Timeline.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.ARSubsystems.Editor.csproj">
+      <Project>{f96a415e-6605-cb21-97cd-3634d5dddae5}</Project>
+      <Name>Unity.XR.ARSubsystems.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.XR.LegacyInputHelpers.csproj">
+      <Project>{60a3a6b2-6e44-ac82-0289-45c53b7aa406}</Project>
+      <Name>UnityEditor.XR.LegacyInputHelpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Management.csproj">
+      <Project>{7c7d18a9-dfde-305b-766e-503bb15e714c}</Project>
+      <Name>Unity.XR.Management</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.ARCore.csproj">
+      <Project>{01dbb44a-e629-8697-a34a-928dc525e863}</Project>
+      <Name>Unity.XR.ARCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.ARSubsystems.csproj">
+      <Project>{043b47d8-8edd-8f43-8ba6-6f1b58455417}</Project>
+      <Name>Unity.XR.ARSubsystems</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.ARFoundation.Editor.csproj">
+      <Project>{0c309e5a-8c19-08f2-e36a-146caf5db4be}</Project>
+      <Name>Unity.XR.ARFoundation.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.SpatialTracking.csproj">
+      <Project>{918f3419-6580-81d7-8f65-4ee97d9b67db}</Project>
+      <Name>UnityEditor.SpatialTracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.ARFoundation.csproj">
+      <Project>{b438dc32-f486-a965-b37b-95e1979b6158}</Project>
+      <Name>Unity.XR.ARFoundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InteractiveTutorials.Core.Scripts.csproj">
+      <Project>{fb18c381-47b8-5af4-ceda-1a5d3321fc3e}</Project>
+      <Name>Unity.InteractiveTutorials.Core.Scripts</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanCommon.csproj">
+      <Project>{69295110-b8bc-0163-7199-5aa81cae1148}</Project>
+      <Name>LeanCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanTouch.csproj">
+      <Project>{8b5f6b02-4aaa-e0a4-0008-105165567f2f}</Project>
+      <Name>LeanTouch</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -27,7 +27,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2020_3_15;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;UNITY_INPUT_SYSTEM;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2020_3_15;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn></NoWarn>
@@ -52,47 +52,47 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ImageConversionJobs.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ArPrestoApi.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\Depth\ARCoreXRDepthSubsystem.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCoreFaceRegionData.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ArCameraConfig.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCoreEnvironmentProbeSubsystem.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ArCameraConfigFacingDirection.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCorePermissionManager.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCorePromise.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCoreFaceRegion.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ArCameraConfigDepthSensorUsage.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCoreApi.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ArConfig.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCorePlaneProvider.deprecated.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCoreCpuImageApi.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCoreCameraSubsystem.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ArString.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\HashCode.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCoreRaycastSubsystem.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ArSession.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ManagedReferenceImage.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ArCameraConfigTargetFps.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\RcoApi.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCoreLoaderConstants.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCoreImageTrackingProvider.deprecated.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCoreLoaderSettings.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCoreBeforeSetConfigurationEventArgs.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCoreAnchorSubsystem.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCoreLoader.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ArCameraConfigFilter.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\Assembly.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCoreBeforeGetCameraConfigurationEventArgs.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCoreImageDatabase.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCoreImageTrackingSubsystem.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCoreSessionSubsystem.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\NativeView.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCoreOcclusionSubsystem.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCorePlaneSubsystem.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\ARCoreFaceSubsystem.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\Input\InputLayoutLoader.cs" />
-     <None Include="Library\PackageCache\com.unity.xr.arcore@4.1.9\Runtime\Unity.XR.ARCore.asmdef" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ImageConversionJobs.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ArPrestoApi.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\Depth\ARCoreXRDepthSubsystem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCoreFaceRegionData.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ArCameraConfig.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCoreEnvironmentProbeSubsystem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ArCameraConfigFacingDirection.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCorePermissionManager.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCorePromise.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCoreFaceRegion.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ArCameraConfigDepthSensorUsage.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCoreApi.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ArConfig.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCorePlaneProvider.deprecated.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCoreCpuImageApi.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCoreCameraSubsystem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ArString.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\HashCode.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCoreRaycastSubsystem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ArSession.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ManagedReferenceImage.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ArCameraConfigTargetFps.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\RcoApi.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCoreLoaderConstants.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCoreImageTrackingProvider.deprecated.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCoreLoaderSettings.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCoreBeforeSetConfigurationEventArgs.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCoreAnchorSubsystem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCoreLoader.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ArCameraConfigFilter.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\Assembly.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCoreBeforeGetCameraConfigurationEventArgs.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCoreImageDatabase.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCoreImageTrackingSubsystem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCoreSessionSubsystem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\NativeView.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCoreOcclusionSubsystem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCorePlaneSubsystem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\ARCoreFaceSubsystem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\Input\InputLayoutLoader.cs" />
+     <None Include="Library\PackageCache\com.unity.xr.arcore@4.1.7\Runtime\Unity.XR.ARCore.asmdef" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -119,6 +119,12 @@
  </Reference>
  <Reference Include="UnityEngine.ClothModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClusterInputModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClusterRendererModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
@@ -272,6 +278,9 @@
  </Reference>
  <Reference Include="UnityEngine.VideoModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VirtualTexturingModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Managed/UnityEngine/UnityEngine.VirtualTexturingModule.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.WindModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
@@ -684,10 +693,6 @@
     <ProjectReference Include="Unity.XR.Management.csproj">
       <Project>{7c7d18a9-dfde-305b-766e-503bb15e714c}</Project>
       <Name>Unity.XR.Management</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InputSystem.csproj">
-      <Project>{cd2482d1-4cb7-7c04-4003-aefce4dd41a8}</Project>
-      <Name>Unity.InputSystem</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{1194d11d-c477-762a-2a9f-64b1f13901eb}</Project>
