@@ -6,3 +6,5 @@ We expand the availability of educational science games for elementary-aged chil
 Our unique contribution is we include Augmented Reality as part of the learning experience.
 
 Follow to hear the latest!
+
+All new games availabe! 
