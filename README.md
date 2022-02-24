@@ -8,3 +8,5 @@ Our unique contribution is we include Augmented Reality as part of the learning 
 Follow to hear the latest!
 
 All new games availabe! 
+
+We're working with parents to create the most engaging and helpful learning tool possible!
