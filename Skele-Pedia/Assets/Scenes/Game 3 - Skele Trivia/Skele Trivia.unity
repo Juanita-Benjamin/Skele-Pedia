@@ -732,6 +732,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162448287}
   m_CullTransparentMesh: 1
+--- !u!1 &162542742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1508787157624675963, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+    type: 3}
+  m_PrefabInstance: {fileID: 906453924}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &162542743 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1508787157624675957, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+    type: 3}
+  m_PrefabInstance: {fileID: 906453924}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &169185590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,6 +1048,7 @@ GameObject:
   - component: {fileID: 225492479}
   - component: {fileID: 225492478}
   - component: {fileID: 225492481}
+  - component: {fileID: 225492482}
   m_Layer: 5
   m_Name: Answer 2
   m_TagString: Untagged
@@ -1108,7 +1121,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 225492479}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1009341578}
+        m_TargetAssemblyTypeName: TriviaGame2, Assembly-CSharp
+        m_MethodName: checkIfCorrect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 225492482}
+        m_TargetAssemblyTypeName: triviaGameAnswButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &225492479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1166,6 +1203,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &225492482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225492476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6678687eca25481fa4a4117111f4c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisButtonText: {fileID: 785821671}
+  thisButtonName: 
+  triviaGame: {fileID: 1009341578}
 --- !u!1 &238097507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1285,8 +1337,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1708829412}
-        m_TargetAssemblyTypeName: TriviaGame, Assembly-CSharp
+      - m_Target: {fileID: 1009341578}
+        m_TargetAssemblyTypeName: TriviaGame2, Assembly-CSharp
         m_MethodName: Reset
         m_Mode: 1
         m_Arguments:
@@ -3865,6 +3917,7 @@ GameObject:
   - component: {fileID: 751394543}
   - component: {fileID: 751394542}
   - component: {fileID: 751394541}
+  - component: {fileID: 751394545}
   m_Layer: 5
   m_Name: Answer 4
   m_TagString: Untagged
@@ -3956,7 +4009,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 751394543}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1009341578}
+        m_TargetAssemblyTypeName: TriviaGame2, Assembly-CSharp
+        m_MethodName: checkIfCorrect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 751394545}
+        m_TargetAssemblyTypeName: triviaGameAnswButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &751394543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3995,6 +4072,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751394539}
   m_CullTransparentMesh: 1
+--- !u!114 &751394545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751394539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6678687eca25481fa4a4117111f4c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisButtonText: {fileID: 1097397047}
+  thisButtonName: 
+  triviaGame: {fileID: 1009341578}
 --- !u!1 &784525493
 GameObject:
   m_ObjectHideFlags: 0
@@ -4714,6 +4806,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 893069002}
   m_CullTransparentMesh: 1
+--- !u!1001 &906453924
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1077620204}
+    m_Modifications:
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9396927
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.3420201
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -187
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 187
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675958, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_fontColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675958, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 2883328
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675963, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_Name
+      value: Correct Identifier 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508787157624675963, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 32a7d4d81dfb04d72a9d016339ec0747, type: 3}
 --- !u!1 &926142766 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3078756319599703061, guid: 59b8328d976e84e49875b7b31fefd9ea,
@@ -4794,6 +5020,132 @@ Transform:
   m_Father: {fileID: 1927932716}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &978123135 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1508787157624675956, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+    type: 3}
+  m_PrefabInstance: {fileID: 906453924}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1009341577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1281350486951272704, guid: 88346340c56c44159a2f94f055839b13,
+    type: 3}
+  m_PrefabInstance: {fileID: 1281350487375522367}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1009341578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009341577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e19479c7ff4d4349bf718cc15747b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomCorrectAnswer: 1
+  i: 0
+  skeleton: {fileID: 1807223098}
+  Bones:
+  - {fileID: 521898678}
+  - {fileID: 466688266}
+  - {fileID: 405007735}
+  - {fileID: 639836377}
+  - {fileID: 28732493}
+  - {fileID: 1394089279}
+  - {fileID: 1869792367}
+  - {fileID: 1145673361}
+  - {fileID: 292600728}
+  - {fileID: 1074220220}
+  - {fileID: 298666395}
+  - {fileID: 1927932715}
+  - {fileID: 1125221291}
+  - {fileID: 801748404}
+  - {fileID: 1083537385}
+  - {fileID: 926142766}
+  - {fileID: 1422980236}
+  - {fileID: 1844989433}
+  - {fileID: 1544108565}
+  correctBones:
+  - {fileID: 521898678}
+  - {fileID: 466688266}
+  - {fileID: 405007735}
+  - {fileID: 639836377}
+  - {fileID: 28732493}
+  - {fileID: 1394089279}
+  - {fileID: 1869792367}
+  - {fileID: 1145673361}
+  - {fileID: 292600728}
+  - {fileID: 1074220220}
+  - {fileID: 298666395}
+  - {fileID: 1927932715}
+  - {fileID: 1125221291}
+  - {fileID: 801748404}
+  - {fileID: 1083537385}
+  - {fileID: 926142766}
+  - {fileID: 1422980236}
+  - {fileID: 1844989433}
+  - {fileID: 1544108565}
+  temp:
+  - {fileID: 521898678}
+  - {fileID: 466688266}
+  - {fileID: 405007735}
+  - {fileID: 639836377}
+  - {fileID: 28732493}
+  - {fileID: 1394089279}
+  - {fileID: 1869792367}
+  - {fileID: 1145673361}
+  - {fileID: 292600728}
+  - {fileID: 1074220220}
+  - {fileID: 298666395}
+  - {fileID: 1927932715}
+  - {fileID: 1125221291}
+  - {fileID: 801748404}
+  - {fileID: 1083537385}
+  - {fileID: 926142766}
+  - {fileID: 1422980236}
+  - {fileID: 1844989433}
+  - {fileID: 1544108565}
+  options:
+  - {fileID: 1830903490}
+  - {fileID: 225492478}
+  - {fileID: 1577130091}
+  - {fileID: 751394542}
+  optionsText:
+  - {fileID: 642386059}
+  - {fileID: 785821671}
+  - {fileID: 1825448632}
+  - {fileID: 1097397047}
+  optionsTransforms:
+  - {fileID: 1830903489}
+  - {fileID: 225492477}
+  - {fileID: 1577130089}
+  - {fileID: 751394540}
+  correctAnswer: {fileID: 0}
+  choices:
+  - 
+  - 
+  - 
+  - 
+  QuestionText: {fileID: 0}
+  clicked: 0
+  clickedString: 
+  displaySingleBone: 1
+  highlightSingleBone: 1
+  nextQuestionButton: {fileID: 0}
+  gameEnd: 0
+  tempButton: {fileID: 0}
+  animationCorrect: {fileID: 162542742}
+  anim: {fileID: 162542743}
+  correctLogo1: {fileID: 1508787157624675963, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+    type: 3}
+  correctLogo2: {fileID: 1991891449223665360, guid: b18796ad6b90042108a459653895ee1d,
+    type: 3}
+  correctLogo3: {fileID: 8099727467818580090, guid: 0af9391aae86b4a148bd3827f8b68c07,
+    type: 3}
+  correctLogo4: {fileID: 4471541244851042711, guid: 844771c74a2ce416f9b8f20fa01534a1,
+    type: 3}
 --- !u!1 &1074220220 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8118694091829396662, guid: 59b8328d976e84e49875b7b31fefd9ea,
@@ -4942,6 +5294,7 @@ RectTransform:
   - {fileID: 1335827361}
   - {fileID: 238097508}
   - {fileID: 499566957}
+  - {fileID: 978123135}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7094,6 +7447,7 @@ GameObject:
   - component: {fileID: 1577130092}
   - component: {fileID: 1577130091}
   - component: {fileID: 1577130090}
+  - component: {fileID: 1577130094}
   m_Layer: 5
   m_Name: Answer 3
   m_TagString: Untagged
@@ -7185,7 +7539,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1577130092}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1009341578}
+        m_TargetAssemblyTypeName: TriviaGame2, Assembly-CSharp
+        m_MethodName: checkIfCorrect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1577130094}
+        m_TargetAssemblyTypeName: triviaGameAnswButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1577130092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7224,6 +7602,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577130088}
   m_CullTransparentMesh: 1
+--- !u!114 &1577130094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577130088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6678687eca25481fa4a4117111f4c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisButtonText: {fileID: 1825448632}
+  thisButtonName: 
+  triviaGame: {fileID: 1009341578}
 --- !u!1 &1586311322
 GameObject:
   m_ObjectHideFlags: 0
@@ -7458,18 +7851,6 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1708829412 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
-    type: 3}
-  m_PrefabInstance: {fileID: 1281350487375522367}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ee1789bee7bd4f66b4d164a417dc1c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1709135490
 GameObject:
   m_ObjectHideFlags: 0
@@ -7500,6 +7881,12 @@ Transform:
   m_Father: {fileID: 1394089280}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1807223098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 235103820406394265, guid: 59b8328d976e84e49875b7b31fefd9ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 656168142}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1825448630
 GameObject:
   m_ObjectHideFlags: 0
@@ -7608,6 +7995,7 @@ GameObject:
   - component: {fileID: 1830903491}
   - component: {fileID: 1830903490}
   - component: {fileID: 1830903493}
+  - component: {fileID: 1830903494}
   m_Layer: 5
   m_Name: Answer 1
   m_TagString: Untagged
@@ -7680,7 +8068,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1830903491}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1009341578}
+        m_TargetAssemblyTypeName: TriviaGame2, Assembly-CSharp
+        m_MethodName: checkIfCorrect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1830903494}
+        m_TargetAssemblyTypeName: triviaGameAnswButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1830903491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7738,6 +8150,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1830903494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830903488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6678687eca25481fa4a4117111f4c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisButtonText: {fileID: 642386059}
+  thisButtonName: 
+  triviaGame: {fileID: 1009341578}
 --- !u!1 &1844989433 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4178954200151951970, guid: 59b8328d976e84e49875b7b31fefd9ea,
@@ -8125,6 +8552,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TriviaGameRunner
       objectReference: {fileID: 0}
+    - target: {fileID: 1281350486951272704, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1281350486951272829, guid: 88346340c56c44159a2f94f055839b13,
         type: 3}
       propertyPath: m_RootOrder
@@ -8182,14 +8614,74 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
       propertyPath: correctAnswer
       value: 
       objectReference: {fileID: 298666395}
     - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
         type: 3}
+      propertyPath: temp.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
       propertyPath: nextQuestionButton
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: temp.Array.data[0]
+      value: 
+      objectReference: {fileID: 521898678}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: temp.Array.data[1]
+      value: 
+      objectReference: {fileID: 466688266}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: temp.Array.data[2]
+      value: 
+      objectReference: {fileID: 405007735}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: temp.Array.data[3]
+      value: 
+      objectReference: {fileID: 639836377}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: temp.Array.data[4]
+      value: 
+      objectReference: {fileID: 28732493}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: temp.Array.data[5]
+      value: 
+      objectReference: {fileID: 1394089279}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: temp.Array.data[6]
+      value: 
+      objectReference: {fileID: 1869792367}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: temp.Array.data[7]
+      value: 
+      objectReference: {fileID: 1145673361}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: temp.Array.data[8]
+      value: 
+      objectReference: {fileID: 292600728}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: temp.Array.data[9]
+      value: 
+      objectReference: {fileID: 1074220220}
     - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
         type: 3}
       propertyPath: Bones.Array.data[0]
@@ -8245,6 +8737,51 @@ PrefabInstance:
       propertyPath: randomCorrectAnswer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: temp.Array.data[10]
+      value: 
+      objectReference: {fileID: 298666395}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: temp.Array.data[11]
+      value: 
+      objectReference: {fileID: 1927932715}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: temp.Array.data[12]
+      value: 
+      objectReference: {fileID: 1125221291}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: temp.Array.data[13]
+      value: 
+      objectReference: {fileID: 801748404}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: temp.Array.data[14]
+      value: 
+      objectReference: {fileID: 1083537385}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: temp.Array.data[15]
+      value: 
+      objectReference: {fileID: 926142766}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: temp.Array.data[16]
+      value: 
+      objectReference: {fileID: 1422980236}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: temp.Array.data[17]
+      value: 
+      objectReference: {fileID: 1844989433}
+    - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
+        type: 3}
+      propertyPath: temp.Array.data[18]
+      value: 
+      objectReference: {fileID: 1544108565}
     - target: {fileID: 1281350486951272830, guid: 88346340c56c44159a2f94f055839b13,
         type: 3}
       propertyPath: Bones.Array.data[10]
