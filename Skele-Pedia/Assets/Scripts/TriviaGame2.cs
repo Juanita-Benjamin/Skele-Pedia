@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-//using TMPro;
+using TMPro;
 //using System;
 using UnityEngine.EventSystems;
 
@@ -47,6 +47,12 @@ public class TriviaGame2 : MonoBehaviour
     public GameObject correctLogo1; //displayed when the player gets something right
 
     int streak = 0;
+
+    public GameObject scoreAnim;
+    public int score = 0;
+    public GameObject multiplierText;
+
+    int removedBones = 0;
 
     void Start()
     {
@@ -136,9 +142,9 @@ public class TriviaGame2 : MonoBehaviour
 
     public void Reset()
     {
-        
+        removedBones++;
         Debug.Log("Reseting!");
-        int correctAnswerIndex = Random.Range(0,correctBones.Count);
+        int correctAnswerIndex = Random.Range(0,correctBones.Count - removedBones);
         Debug.Log("Correct Answer index"+correctAnswerIndex);
         correctAnswer = correctBones[correctAnswerIndex]; //gets random correct bones```  `
         //remove from correct bones
@@ -148,10 +154,10 @@ public class TriviaGame2 : MonoBehaviour
 
         choices[0] = correctAnswer.name; //multiple choice first answer = correct answer (later randomized)
         for(int i = 1; i<choices.Count;i++){
-            int randVal = Random.Range(0,Bones.Count);
+            int randVal = Random.Range(0,Bones.Count - removedBones);
             string randValStr = temp[randVal].name;
             choices[i] = randValStr;
-            temp.RemoveAt(randVal);   
+            //temp.RemoveAt(randVal);   
         }
         loadText();
          if(boneOnDisplay!=null)
@@ -191,7 +197,7 @@ public class TriviaGame2 : MonoBehaviour
 
         if(correctAnswerString == clickedName){
             Debug.Log("That is a correct answer!");
-            //
+            streak++;
             
             sayCorrect();
             //Invoke("Reset",3f); //regardless, go to the next question after 2 seconds
@@ -208,9 +214,22 @@ public class TriviaGame2 : MonoBehaviour
     } 
     void sayCorrect(){
         //animationCorrect.gameObject.SetActive(true);
-        
+        int addedScore = 10*Random.Range(1,4)*streak;
+        score = score+addedScore;
         anim.Play("correct");
-        
+        scoreAnim.GetComponent<Animator>().Play("scale");
+        string scorePlusScoreString = addedScore.ToString() +"+"+ score.ToString();
+        scoreAnim.GetComponent<TextMeshProUGUI>().text = scorePlusScoreString;
+        Invoke("updateScoreText",2f);
+
+        multiplierText.GetComponent<TextMeshProUGUI>().text = "x"+(streak+1).ToString();
+        multiplierText.GetComponent<Animator>().Play("show");
+
+        //Invoke("Reset",3f);
+    }
+
+    void updateScoreText(){
+        scoreAnim.GetComponent<TextMeshProUGUI>().text = score.ToString();
     }
     
     
