@@ -11,12 +11,12 @@ public class TriviaGame : MonoBehaviour
     public int i = 0; //index
     
     public List<GameObject> Bones = new List<GameObject>();
+    public List<GameObject> correctBones = new List<GameObject>();
+    public List<GameObject> temp = new List<GameObject>(); 
     //public int length;
 
     public List<Button> options = new List<Button>();
     public List<Text> optionsText;
-    
-
     
     public GameObject correctAnswer;
     public List<string> choices = new List<string>();
@@ -30,11 +30,22 @@ public class TriviaGame : MonoBehaviour
     private GameObject boneOnDisplay;
     public Button nextQuestionButton;
 
+    public bool gameEnd = false;
+
     void Start()
     {
-        Reset();
+
+        copyBones();
+        //Reset();
+        Debug.Log("Bones:" + Bones.Count);
     }
 
+    void copyBones(){
+        correctBones = Bones;
+        for(int i = 0; i<Bones.Count;i++){
+            correctBones[i] = Bones[i];
+        }
+    }
 
     void loadText(){
         for(int i=0; i<choices.Count;i++){
@@ -65,10 +76,6 @@ public class TriviaGame : MonoBehaviour
         
     }
 
-    public GameObject GetRandomCorrectAnswer(List<GameObject> Bones){
-        return Bones[Random.Range(0,Bones.Count)];
-    }
-
     public void highlight(){
         correctAnswer.AddComponent<highLight>();
         correctAnswer.GetComponent<highLight>().hover = false;
@@ -78,28 +85,41 @@ public class TriviaGame : MonoBehaviour
     public void Reset()
     {
         Debug.Log("Reseting!");
-        if(randomCorrectAnswer==true) //set it, other wise make it what we chose
-            correctAnswer = GetRandomCorrectAnswer(Bones);
-        choices[0] = correctAnswer.name;
-        int chosenBone = 0;
+        int correctAnswerIndex = Random.Range(0,correctBones.Count);
+        correctAnswer = correctBones[correctAnswerIndex]; //gets random correct bones```  `
+        //remove from correct bones
+        correctBones.RemoveAt(correctAnswerIndex); //
+        //temp = correctBones.ToList();
+        for(int i = 0; i < correctBones.Count; i++ ){
+            temp[i] = correctBones[i];
+        }
+
+        choices[0] = correctAnswer.name; //multiple choice first answer = correct answer (later randomized)
         for(int i = 1; i<choices.Count;i++){
-            int randVal = Random.Range(0,Bones.Count);
-            if(Bones[randVal]==correctAnswer){
-                randVal = (randVal + 1) % (Bones.Count);
-            }
-            string randValStr = Bones[randVal].name;
+            int randVal = Random.Range(0,temp.Count);
+            string randValStr = temp[randVal].name;
             choices[i] = randValStr;
-            Bones.RemoveAt(randVal); //
+            temp.RemoveAt(randVal);   
         }
         loadText();
-        if(boneOnDisplay!=null)
-            Destroy(boneOnDisplay);
+         if(boneOnDisplay!=null)
+             Destroy(boneOnDisplay);
         if(displaySingleBone){
             displayBone();
         }
         if(highlightSingleBone){
             highlight();
         }
+
+        Debug.Log("correct Bones:" + correctBones.Count);
+        Debug.Log("Bones:" + Bones.Count);
+        
+        
+        
+    }
+
+    void randomizeButtons(){
+        Vector3 tempPosition = new Vector3();
     }
     
     
