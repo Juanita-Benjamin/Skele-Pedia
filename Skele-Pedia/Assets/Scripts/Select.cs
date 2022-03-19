@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
 public class Select : MonoBehaviour
 {
     public List<GameObject> skeletalpieces;
-    
+    public List<GameObject> newpieces;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,11 +35,29 @@ public class Select : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.collider != null)
+
+                for (int i = 0; i < skeletalpieces.Count; i++)
                 {
-                    hit.collider.GetComponent<Outline>().enabled = true;
-                    Debug.Log(hit.collider.name);
+                    if (hit.collider.gameObject.name == skeletalpieces[i].gameObject.name)
+                    {
+                        hit.collider.gameObject.GetComponent<Outline>().enabled = true;
+                        newpieces.Add(hit.collider.gameObject);
+                        skeletalpieces.Remove(hit.collider.gameObject);
+                       
+                    }
+                    else
+                    {
+                        // foreach (var piece in newpieces)
+                        // {
+                        //     piece.GetComponent<Outline>().enabled = false;
+                        // }
+                    }
                 }
+                // if (hit.collider != null)
+                // {
+                //     hit.collider.GetComponent<Outline>().enabled = true;
+                // }
+                Debug.Log(hit.collider.name);
             }
         }
     }
