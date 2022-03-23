@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +5,7 @@ public class Select : MonoBehaviour
 {
     public List<GameObject> skeletalpieces;
     public List<GameObject> newpieces;
+    public List<GameObject> descriptions;
 
     // Start is called before the first frame update
     void Start()
@@ -17,13 +17,6 @@ public class Select : MonoBehaviour
     void Update()
     {
         Highlight();
-      
-      
-        //To Do:
-        //1: Get name of gameobject
-        //2: When you click on the object, and if the object matches the name 
-        //in the list then, highlight.
-        //3: Otherwise: de-highlight
     }
 
     void Highlight()
@@ -45,19 +38,20 @@ public class Select : MonoBehaviour
                         skeletalpieces.Remove(hit.collider.gameObject);
                        
                     }
-                    else
-                    {
-                        // foreach (var piece in newpieces)
-                        // {
-                        //     piece.GetComponent<Outline>().enabled = false;
-                        // }
-                    }
                 }
-                // if (hit.collider != null)
-                // {
-                //     hit.collider.GetComponent<Outline>().enabled = true;
-                // }
                 Debug.Log(hit.collider.name);
+            }
+
+            for (int i = 0; i < descriptions.Count; i++)
+            {
+                if (skeletalpieces[i].name == descriptions[i].name)
+                {
+                    descriptions[i].SetActive(true);
+                }
+                else
+                {
+                    descriptions[i].SetActive(false);
+                }
             }
         }
     }
