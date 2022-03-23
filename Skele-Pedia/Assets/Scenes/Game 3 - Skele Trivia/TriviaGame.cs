@@ -54,7 +54,7 @@ public class TriviaGame : MonoBehaviour
     }
 
     void displayBone(){
-        correctAnswer.GetComponent<highLight>().deHighLight(); 
+        //correctAnswer.GetComponent<highLight>().deHighLight(); 
 
         boneOnDisplay = Instantiate(correctAnswer,transform.position, Quaternion.identity);
         boneOnDisplay.GetComponent<highLight>().deHighLight();
