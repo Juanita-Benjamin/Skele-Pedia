@@ -2,28 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-//using TMPro;
+using TMPro;
 //using System;
+using UnityEngine.EventSystems;
 
-public class TriviaGame : MonoBehaviour
+public class TriviaGame2 : MonoBehaviour
 {
     public bool randomCorrectAnswer = true;
     public int i = 0; //index
     
-    public List<GameObject> Bones = new List<GameObject>();
+    public GameObject skeleton = new GameObject();
+    public List<GameObject> Bones; // new List<GameObject>();
     public List<GameObject> correctBones = new List<GameObject>();
     public List<GameObject> temp = new List<GameObject>(); 
     //public int length;
+    
 
     public List<Button> options = new List<Button>();
-    public List<Transform> optionsTransforms = new List<Transform>();
     public List<Text> optionsText;
+    public List<Transform> optionsTransforms = new List<Transform>();
     
     public GameObject correctAnswer;
     public List<string> choices = new List<string>();
     
     public Text QuestionText;
     public int clicked;
+    public string clickedString;
 
     public bool displaySingleBone = true;
     public bool highlightSingleBone = true;
@@ -34,13 +38,64 @@ public class TriviaGame : MonoBehaviour
     public bool gameEnd = false;
 
     public Button tempButton;
+
+    EventSystem eventSystem; //to get which button was clicked
+
+    public GameObject animationCorrect; 
+
+    public Animator anim;
+    public GameObject correctLogo1; //displayed when the player gets something right
+
+    int streak = 0;
+
+    public GameObject scoreAnim;
+    public int score = 0;
+    public GameObject multiplierText;
+
+    int removedBones = 0;
+
     void Start()
     {
+        /* foreach (Transform child in skeleton.transform)
+        {
+            if (true){
+                //if the bone is not in the list
+                Bones.Add(child.GetComponent<GameObject>());
+            }
+        } */
+
+        /* foreach (Button button in FindObjectsOfType<Button>())
+        {
+            //options button
+            if(button.GetComponent<Text>().text.Contains("Option")){
+                options.Add(button); // add options button
+                optionsText.Add(button.GetComponent<Text>());
+                optionsTransforms.Add(button.GetComponent<Transform>());
+                choices.Add(button.GetComponent<Text>().text);
+            }
+            else if(button.GetComponent<Text>().text.Contains("Next Question")){
+                Button nextQuestion = button; //not an option, but a next question button instead
+                nextQuestionButton = nextQuestion; //
+            }
+        }
+        
+
+        
+
+        for(int i=0; i<options.Count;i++){
+            optionsText[i] = options[i].GetComponent<Text>();
+        }
+        */
+
 
 
         copyBones();
-        //Reset();
+        Reset();
         Debug.Log("Bones:" + Bones.Count);
+
+        
+
+        
     }
 
     void copyBones(){
@@ -57,8 +112,8 @@ public class TriviaGame : MonoBehaviour
     }
 
     void displayBone(){
-        //correctAnswer.GetComponent<highLight>().deHighLight(); 
-
+        correctAnswer.GetComponent<highLight>().deHighLight(); 
+        
         boneOnDisplay = Instantiate(correctAnswer,transform.position, Quaternion.identity);
         boneOnDisplay.GetComponent<highLight>().deHighLight();
         modifyPosition(boneOnDisplay.transform);
@@ -87,35 +142,23 @@ public class TriviaGame : MonoBehaviour
 
     public void Reset()
     {
+        removedBones++;
         Debug.Log("Reseting!");
-        int correctAnswerIndex = Random.Range(0,correctBones.Count);
+        int correctAnswerIndex = Random.Range(0,correctBones.Count - removedBones);
+        Debug.Log("Correct Answer index"+correctAnswerIndex);
         correctAnswer = correctBones[correctAnswerIndex]; //gets random correct bones```  `
         //remove from correct bones
         correctBones.RemoveAt(correctAnswerIndex); //
         //temp = correctBones.ToList();
-
         
-
-        choices[0] = correctAnswer.name; //multiple choice first answer = correct answer (later randomized)
-        // for(int i = 1; i<choices.Count-1;i++){
-        //     int randVal = Random.Range(0,Bones.Count);
-        //     string randValStr = Bones[randVal].name;
-        //     choices[i] = randValStr;
-        //     temp.RemoveAt(randVal);   
-        // }
-=======
-        for(int i = 0; i < correctBones.Count; i++ ){
-            temp[i] = correctBones[i];
-        }
 
         choices[0] = correctAnswer.name; //multiple choice first answer = correct answer (later randomized)
         for(int i = 1; i<choices.Count;i++){
-            int randVal = Random.Range(0,temp.Count);
+            int randVal = Random.Range(0,Bones.Count - removedBones);
             string randValStr = temp[randVal].name;
             choices[i] = randValStr;
-            temp.RemoveAt(randVal);   
+            //temp.RemoveAt(randVal);   
         }
-        
         loadText();
          if(boneOnDisplay!=null)
              Destroy(boneOnDisplay);
@@ -128,12 +171,14 @@ public class TriviaGame : MonoBehaviour
 
         Debug.Log("correct Bones:" + correctBones.Count);
         Debug.Log("Bones:" + Bones.Count);
+
         
         randomizeButtons(); //randomizes button order
         
+        //make the new correct answer button get adjusted
     }
 
-    void randomizeButtons(){
+    public void randomizeButtons(){
         
         Vector3 temp;
         for (int i = 0; i < optionsTransforms.Count; i++) {
@@ -142,7 +187,49 @@ public class TriviaGame : MonoBehaviour
              optionsTransforms[rnd].position = optionsTransforms[i].position;
              optionsTransforms[i].position = temp;
          }
-        Vector3 tempPosition = new Vector3();
+    }
+
+    public void checkIfCorrect(){
+        string clickedName = clickedString;
+        Debug.Log("Checking if " +clickedName+ " is the correct answer.");
+        
+        string correctAnswerString = correctAnswer.name;
+
+        if(correctAnswerString == clickedName){
+            Debug.Log("That is a correct answer!");
+            streak++;
+            
+            sayCorrect();
+            //Invoke("Reset",3f); //regardless, go to the next question after 2 seconds
+        }
+        else{
+            Debug.Log("Wrong: clickedString: "+ clickedString+ " correctAnswerString: "+correctAnswerString );
+            anim.Play("wrong");
+            streak = 0;
+
+        }
+
+        
+
+    } 
+    void sayCorrect(){
+        //animationCorrect.gameObject.SetActive(true);
+        int addedScore = 10*Random.Range(1,4)*streak;
+        score = score+addedScore;
+        anim.Play("correct");
+        scoreAnim.GetComponent<Animator>().Play("scale");
+        string scorePlusScoreString = addedScore.ToString() +"+"+ score.ToString();
+        scoreAnim.GetComponent<TextMeshProUGUI>().text = scorePlusScoreString;
+        Invoke("updateScoreText",2f);
+
+        multiplierText.GetComponent<TextMeshProUGUI>().text = "x"+(streak+1).ToString();
+        multiplierText.GetComponent<Animator>().Play("show");
+
+        //Invoke("Reset",3f);
+    }
+
+    void updateScoreText(){
+        scoreAnim.GetComponent<TextMeshProUGUI>().text = score.ToString();
     }
     
     
