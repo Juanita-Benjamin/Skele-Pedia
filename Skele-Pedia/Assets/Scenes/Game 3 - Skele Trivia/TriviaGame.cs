@@ -34,10 +34,10 @@ public class TriviaGame : MonoBehaviour
     public bool gameEnd = false;
 
     public Button tempButton;
-
     void Start()
     {
-        
+
+
         copyBones();
         //Reset();
         Debug.Log("Bones:" + Bones.Count);
@@ -57,7 +57,7 @@ public class TriviaGame : MonoBehaviour
     }
 
     void displayBone(){
-        correctAnswer.GetComponent<highLight>().deHighLight(); 
+        //correctAnswer.GetComponent<highLight>().deHighLight(); 
 
         boneOnDisplay = Instantiate(correctAnswer,transform.position, Quaternion.identity);
         boneOnDisplay.GetComponent<highLight>().deHighLight();
@@ -93,6 +93,7 @@ public class TriviaGame : MonoBehaviour
         //remove from correct bones
         correctBones.RemoveAt(correctAnswerIndex); //
         //temp = correctBones.ToList();
+
         
 
         choices[0] = correctAnswer.name; //multiple choice first answer = correct answer (later randomized)
@@ -102,6 +103,19 @@ public class TriviaGame : MonoBehaviour
         //     choices[i] = randValStr;
         //     temp.RemoveAt(randVal);   
         // }
+=======
+        for(int i = 0; i < correctBones.Count; i++ ){
+            temp[i] = correctBones[i];
+        }
+
+        choices[0] = correctAnswer.name; //multiple choice first answer = correct answer (later randomized)
+        for(int i = 1; i<choices.Count;i++){
+            int randVal = Random.Range(0,temp.Count);
+            string randValStr = temp[randVal].name;
+            choices[i] = randValStr;
+            temp.RemoveAt(randVal);   
+        }
+        
         loadText();
          if(boneOnDisplay!=null)
              Destroy(boneOnDisplay);
@@ -128,6 +142,7 @@ public class TriviaGame : MonoBehaviour
              optionsTransforms[rnd].position = optionsTransforms[i].position;
              optionsTransforms[i].position = temp;
          }
+        Vector3 tempPosition = new Vector3();
     }
     
     
