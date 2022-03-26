@@ -15,7 +15,9 @@ Trivia Game 1 Done and Ready to Play!
 
 AR Functionality and Highlight with Mobile touch based gestures now working!
 
-Instructions for downloading Vuforia(will improve this section later):
+---------------------------
+
+**Instructions for downloading Vuforia:**
 
 In order to download and use this project, you will first need a license at:
 Vuforia.com
