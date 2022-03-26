@@ -11,7 +11,6 @@ public class TriviaGame2 : MonoBehaviour
     public bool randomCorrectAnswer = true;
     public int i = 0; //index
     
-    public GameObject skeleton = new GameObject();
     public List<GameObject> Bones; // new List<GameObject>();
     public List<GameObject> correctBones = new List<GameObject>();
     public List<GameObject> temp = new List<GameObject>(); 
@@ -25,7 +24,7 @@ public class TriviaGame2 : MonoBehaviour
     public GameObject correctAnswer;
     public List<string> choices = new List<string>();
     
-    public Text QuestionText;
+    public TextMeshProUGUI QuestionText;
     public int clicked;
     public string clickedString;
 
@@ -36,8 +35,6 @@ public class TriviaGame2 : MonoBehaviour
     public Button nextQuestionButton;
 
     public bool gameEnd = false;
-
-    public Button tempButton;
 
     EventSystem eventSystem; //to get which button was clicked
 
