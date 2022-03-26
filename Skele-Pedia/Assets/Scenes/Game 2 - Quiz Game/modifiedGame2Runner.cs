@@ -14,11 +14,48 @@ public class modifiedGame2Runner : MonoBehaviour
     public List<Button> options = new List<Button>();
 
     public TextMeshProUGUI QuestionText; //its a text mesh pro text object
+    public TextMeshProUGUI correctAnswText;
+    public TextMeshProUGUI incorrectAnswText1, incorrectAnswText2, incorrectAnswText3;
+    public Animator button1Anim, button2Anim, button3Anim, button4Anim;
+    public Animator skeleAnim; 
+    public bool clickedCorrect = true;
+
 
     public void Reset(){
         int currentQuestion = Random.Range(0,qList.questionList.Length) - removedQuestions;
         string temp = qList.questionList[currentQuestion].rows[0].ToString();
         QuestionText.text = temp;
+        string tempCorr = qList.questionList[currentQuestion].rows[1].ToString();
+        correctAnswText.text = tempCorr; //temporary correct 
+        string inc1 = qList.questionList[currentQuestion].rows[2].ToString();
+        string inc2 = qList.questionList[currentQuestion].rows[3].ToString();
+        string inc3 = qList.questionList[currentQuestion].rows[4].ToString();
+        incorrectAnswText1.text = inc1;
+        incorrectAnswText2.text = inc2;
+        incorrectAnswText3.text = inc3;
+        materializeNewQuestionAnimationPlay();
+
+        if(clickedCorrect){
+            skeleAnim.Play("correct");
+        }
+        else{
+            skeleAnim.Play("incorrect");
+        }
+    }
+
+    void materializeNewQuestionAnimationPlay(){
+        button1Anim.Play("materialize");
+        button2Anim.Play("materialize");
+        button3Anim.Play("materialize");
+        button4Anim.Play("materialize");
+
+    }
+
+    public void ClickedCorrect(){
+        clickedCorrect = true;
+    }
+    public void ClickedIncorrect(){
+        clickedCorrect = false;
     }
 
     public List<Text> optionsText; //text object
@@ -55,33 +92,7 @@ public class modifiedGame2Runner : MonoBehaviour
 /*
     void Start()
     {
-        copyBones();
         Reset();
-        Debug.Log("Bones:" + Bones.Count);
-
-        
-    }
-
-    void copyBones(){
-        correctBones = Bones;
-        for(int i = 0; i<Bones.Count;i++){
-            correctBones[i] = Bones[i];
-        }
-    }
-
-    void loadText(){
-        for(int i=0; i<choices.Count;i++){
-            optionsText[i].text = choices[i];
-        }
-    }
-
-    void displayBone(){
-        correctAnswer.GetComponent<highLight>().deHighLight(); 
-        
-        boneOnDisplay = Instantiate(correctAnswer,transform.position, Quaternion.identity);
-        boneOnDisplay.GetComponent<highLight>().deHighLight();
-        modifyPosition(boneOnDisplay.transform);
-        //boneOnDisplay.transform.localScale = new Vector3(5f,5f,5f); //make it twice as big as it normally would be
     }
 
     void modifyPosition(Transform boneOnDisplayTransform){
@@ -91,17 +102,6 @@ public class modifiedGame2Runner : MonoBehaviour
         offset += new Vector3(0f, 0f, -3f); //also bring it closer to the camera
         //offset += new Vector3(0f, 2f, 0f); //move it a little up
         boneOnDisplayTransform.position = offset;
-    }
-    
-
-    void displayCorrect(){
-        
-    }
-
-    public void highlight(){
-        correctAnswer.AddComponent<highLight>();
-        correctAnswer.GetComponent<highLight>().hover = false;
-        correctAnswer.GetComponent<highLight>().highLightThis();
     }
 
     
