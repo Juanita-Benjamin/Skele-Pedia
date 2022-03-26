@@ -12,3 +12,5 @@ All new games availabe!
 We're working with parents to create the most engaging and helpful learning tool possible!
 
 Trivia Game 1 Done and Ready to Play!
+
+AR Functionality and Highlight with Mobile touch based gestures now working!
