@@ -4,8 +4,8 @@ using UnityEngine;
 public class Select : MonoBehaviour
 {
     public List<GameObject> skeletalpieces;
-    public List<GameObject> newpieces;
     public List<GameObject> descriptions;
+    public GameObject descriptionPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -34,25 +34,28 @@ public class Select : MonoBehaviour
                     if (hit.collider.gameObject.name == skeletalpieces[i].gameObject.name)
                     {
                         hit.collider.gameObject.GetComponent<Outline>().enabled = true;
-                        newpieces.Add(hit.collider.gameObject);
-                        skeletalpieces.Remove(hit.collider.gameObject);
-                       
+
+                    }
+                    
+                    for (int k = 0; k < descriptions.Count; k++)
+                    {
+                        if (hit.collider.gameObject.name == descriptions[k].gameObject.name)
+                        {
+                            descriptionPanel.SetActive(true);
+                            descriptions[i].SetActive(true);
+                        }
+
+                        else
+                        {
+                            descriptions[k].SetActive(false);
+                        }
                     }
                 }
                 Debug.Log(hit.collider.name);
             }
 
-            for (int i = 0; i < descriptions.Count; i++)
-            {
-                if (skeletalpieces[i].name == descriptions[i].name)
-                {
-                    descriptions[i].SetActive(true);
-                }
-                else
-                {
-                    descriptions[i].SetActive(false);
-                }
-            }
+            
+           
         }
     }
 }
