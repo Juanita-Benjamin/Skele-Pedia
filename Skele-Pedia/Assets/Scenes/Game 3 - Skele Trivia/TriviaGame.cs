@@ -103,7 +103,7 @@ public class TriviaGame : MonoBehaviour
         //     choices[i] = randValStr;
         //     temp.RemoveAt(randVal);   
         // }
-=======
+
         for(int i = 0; i < correctBones.Count; i++ ){
             temp[i] = correctBones[i];
         }
