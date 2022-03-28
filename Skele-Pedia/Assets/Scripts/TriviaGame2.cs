@@ -178,7 +178,8 @@ public class TriviaGame2 : MonoBehaviour
     public void randomizeButtons(){
         
         Vector3 temp;
-        for (int i = 0; i < optionsTransforms.Count; i++) {
+        //I dont think we need a for loop here, just take the 0 index(correct answer) and switch it with a random value - Manuel
+        for (int i = 0; i < optionsTransforms.Count; i++) { 
              int rnd = Random.Range(0, optionsTransforms.Count); //random number created 
              temp = optionsTransforms[rnd].position; //we set the currently,
              optionsTransforms[rnd].position = optionsTransforms[i].position;
