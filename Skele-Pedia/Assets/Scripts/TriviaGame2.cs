@@ -11,41 +11,41 @@ public class TriviaGame2 : MonoBehaviour
     public bool randomCorrectAnswer = true;
     public int i = 0; //index
     
-    public List<GameObject> Bones; // new List<GameObject>();
-    public List<GameObject> correctBones = new List<GameObject>();
-    public List<GameObject> temp = new List<GameObject>(); 
+    public List<GameObject> Bones; // new List<GameObject>(); 
+    public List<GameObject> correctBones = new List<GameObject>(); //we create a list of the bone 3d models in the scene
+    public List<GameObject> temp = new List<GameObject>(); //we duplicate them to pop and push from list, and copy bones
     //public int length;
     
 
-    public List<Button> options = new List<Button>();
-    public List<Text> optionsText;
-    public List<Transform> optionsTransforms = new List<Transform>();
+    public List<Button> options = new List<Button>(); //the four buttons for multiple choice
+    public List<Text> optionsText; //their text properties nested within
+    public List<Transform> optionsTransforms = new List<Transform>(); // their transforms which gives us the position for easy rearanging
     
     public GameObject correctAnswer;
-    public List<string> choices = new List<string>();
+    public List<string> choices = new List<string>(); //the options as strings now, to be moved to the text objects more easily
     
-    public TextMeshProUGUI QuestionText;
-    public int clicked;
-    public string clickedString;
+    public TextMeshProUGUI QuestionText; //contains the question to be asked
+    public int clicked; //if an answer item  is clicked, this number represents the option number they clicked
+    public string clickedString; //the word or string value for the answer they clicked on (in one, its bones, in 2 its actuall questions from the questions class)
 
-    public bool displaySingleBone = true;
-    public bool highlightSingleBone = true;
+    public bool displaySingleBone = true; //for debug
+    public bool highlightSingleBone = true; //show and highlight bones used on screen
 
-    private GameObject boneOnDisplay;
-    public Button nextQuestionButton;
+    private GameObject boneOnDisplay; //the current bone in the question that is being asked
+    public Button nextQuestionButton; //the button that sends us to the next question
 
-    public bool gameEnd = false;
+    public bool gameEnd = false; // once this is checked, we play the game end animation
 
     EventSystem eventSystem; //to get which button was clicked
 
-    public GameObject animationCorrect; 
+    public GameObject animationCorrect; //an icon that appears 
 
-    public Animator anim;
+    public Animator anim; // Animator - these are what we use to play animations - of 3d objects and ui
     public GameObject correctLogo1; //displayed when the player gets something right
 
-    int streak = 0;
+    int streak = 0; //this number goes up when the player gets a question correct. back to 0 when they get soemthing wrong
 
-    public GameObject scoreAnim;
+    public GameObject scoreAnim; //similar aniamtions for the ui elements
     public int score = 0;
     public GameObject multiplierText;
 
@@ -86,9 +86,9 @@ public class TriviaGame2 : MonoBehaviour
 
 
 
-        copyBones();
-        Reset();
-        Debug.Log("Bones:" + Bones.Count);
+        copyBones(); // copies the list of bones into a list
+        Reset(); //plays next questions
+        Debug.Log("Bones:" + Bones.Count); //logs 
 
         
 
@@ -98,17 +98,17 @@ public class TriviaGame2 : MonoBehaviour
     void copyBones(){
         correctBones = Bones;
         for(int i = 0; i<Bones.Count;i++){
-            correctBones[i] = Bones[i];
+            correctBones[i] = Bones[i]; 
         }
     }
 
-    void loadText(){
+    void loadText(){ //loads the text options contained in the answer buttons with the appropriate question text
         for(int i=0; i<choices.Count;i++){
             optionsText[i].text = choices[i];
         }
     }
 
-    void displayBone(){
+    void displayBone(){ //creates, or instantiates a randomly determined bone from the list of bones that have not been used
         correctAnswer.GetComponent<highLight>().deHighLight(); 
         
         boneOnDisplay = Instantiate(correctAnswer,transform.position, Quaternion.identity);
@@ -131,7 +131,7 @@ public class TriviaGame2 : MonoBehaviour
         
     }
 
-    public void highlight(){
+    public void highlight(){ //colors ghe bones (right now it colors all the ones that have been used thus far)
         correctAnswer.AddComponent<highLight>();
         correctAnswer.GetComponent<highLight>().hover = false;
         correctAnswer.GetComponent<highLight>().highLightThis();
