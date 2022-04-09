@@ -223,9 +223,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.6117803, b: 0, a: 1}
-    m_PressedColor: {r: 1, g: 0.13679248, b: 0.33561465, a: 1}
-    m_SelectedColor: {r: 0, g: 1, b: 0.33329916, a: 1}
+    m_HighlightedColor: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
+    m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.9137255, g: 0.9137255, b: 0.9137255, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -246,8 +246,20 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1009341583}
-        m_TargetAssemblyTypeName: modifiedGame2Runner, Assembly-CSharp
+        m_TargetAssemblyTypeName: Trivia2, Assembly-CSharp
         m_MethodName: ClickedIncorrect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1009341583}
+        m_TargetAssemblyTypeName: Trivia2, Assembly-CSharp
+        m_MethodName: Reset
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -450,6 +462,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52016464}
   m_CullTransparentMesh: 1
+--- !u!1 &74316327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1508787157624675963, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+    type: 3}
+  m_PrefabInstance: {fileID: 906453924}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &92858300
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,9 +645,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.6117803, b: 0, a: 1}
-    m_PressedColor: {r: 1, g: 0.13679248, b: 0.33561465, a: 1}
-    m_SelectedColor: {r: 0, g: 1, b: 0.33329916, a: 1}
+    m_HighlightedColor: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
+    m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.9137255, g: 0.9137255, b: 0.9137255, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -650,8 +668,20 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1009341583}
-        m_TargetAssemblyTypeName: modifiedGame2Runner, Assembly-CSharp
+        m_TargetAssemblyTypeName: Trivia2, Assembly-CSharp
         m_MethodName: ClickedIncorrect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1009341583}
+        m_TargetAssemblyTypeName: Trivia2, Assembly-CSharp
+        m_MethodName: Reset
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7808,6 +7838,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 906453924}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &978123136 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1508787157624675957, guid: 32a7d4d81dfb04d72a9d016339ec0747,
+    type: 3}
+  m_PrefabInstance: {fileID: 906453924}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &992642372
 GameObject:
   m_ObjectHideFlags: 0
@@ -8003,11 +8039,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   i: 0
   qList: {fileID: 1009341584}
-  options: []
+  options:
+  - {fileID: 1376179152}
+  - {fileID: 1192747136}
+  - {fileID: 50127314}
+  - {fileID: 93755546}
   QuestionText: {fileID: 487477281}
   correctAnswText: {fileID: 1520045274}
   incorrectAnswText1: {fileID: 172482189}
-  incorrectAnswText2: {fileID: 1746075810}
+  incorrectAnswText2: {fileID: 857709845}
   incorrectAnswText3: {fileID: 1746075810}
   button1Anim: {fileID: 1376179151}
   button2Anim: {fileID: 1192747135}
@@ -8015,8 +8055,17 @@ MonoBehaviour:
   button4Anim: {fileID: 93755545}
   skeleAnim: {fileID: 5580895812400163047}
   clickedCorrect: 1
-  optionsText: []
-  optionsTransforms: []
+  answered: 0
+  optionsText:
+  - {fileID: 1520045274}
+  - {fileID: 172482189}
+  - {fileID: 857709845}
+  - {fileID: 1746075810}
+  optionsTransforms:
+  - {fileID: 1376179149}
+  - {fileID: 1192747133}
+  - {fileID: 50127311}
+  - {fileID: 93755543}
   choices: []
   correctAnswer: {fileID: 0}
   clicked: 0
@@ -8025,12 +8074,12 @@ MonoBehaviour:
   highlightSingleBone: 1
   nextQuestionButton: {fileID: 0}
   gameEnd: 0
-  animationCorrect: {fileID: 0}
-  anim: {fileID: 0}
-  correctLogo1: {fileID: 0}
-  scoreAnim: {fileID: 0}
+  animationCorrect: {fileID: 74316327}
+  anim: {fileID: 978123136}
+  correctLogo1: {fileID: 74316327}
+  scoreAnim: {fileID: 992642372}
   score: 0
-  multiplierText: {fileID: 0}
+  multiplierText: {fileID: 1540581238}
 --- !u!114 &1009341584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8753,9 +8802,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.6117803, b: 0, a: 1}
-    m_PressedColor: {r: 1, g: 0.13679248, b: 0.33561465, a: 1}
-    m_SelectedColor: {r: 0, g: 1, b: 0.33329916, a: 1}
+    m_HighlightedColor: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
+    m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.9137255, g: 0.9137255, b: 0.9137255, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -8776,8 +8825,20 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1009341583}
-        m_TargetAssemblyTypeName: modifiedGame2Runner, Assembly-CSharp
+        m_TargetAssemblyTypeName: Trivia2, Assembly-CSharp
         m_MethodName: ClickedIncorrect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1009341583}
+        m_TargetAssemblyTypeName: Trivia2, Assembly-CSharp
+        m_MethodName: Reset
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9034,9 +9095,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.6117803, b: 0, a: 1}
-    m_PressedColor: {r: 1, g: 0.13679248, b: 0.33561465, a: 1}
-    m_SelectedColor: {r: 0, g: 1, b: 0.33329916, a: 1}
+    m_HighlightedColor: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
+    m_PressedColor: {r: 0, g: 1, b: 0.092084646, a: 1}
+    m_SelectedColor: {r: 0.9137255, g: 0.9137255, b: 0.9137255, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -9057,8 +9118,20 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1009341583}
-        m_TargetAssemblyTypeName: modifiedGame2Runner, Assembly-CSharp
+        m_TargetAssemblyTypeName: Trivia2, Assembly-CSharp
         m_MethodName: ClickedCorrect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1009341583}
+        m_TargetAssemblyTypeName: Trivia2, Assembly-CSharp
+        m_MethodName: Reset
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

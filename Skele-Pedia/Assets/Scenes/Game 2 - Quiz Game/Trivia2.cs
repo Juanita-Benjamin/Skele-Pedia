@@ -19,7 +19,11 @@ public class Trivia2 : MonoBehaviour
     public Animator button1Anim, button2Anim, button3Anim, button4Anim;
     public Animator skeleAnim; 
     public bool clickedCorrect = true;
+    public bool answered = false;
 
+    public void Start(){
+        Reset();
+    }
 
     public void Reset(){
         int currentQuestion = Random.Range(0,qList.questionList.Length) - removedQuestions;
@@ -33,9 +37,12 @@ public class Trivia2 : MonoBehaviour
         incorrectAnswText1.text = inc1;
         incorrectAnswText2.text = inc2;
         incorrectAnswText3.text = inc3;
+
+        randomizeButtons();
+
         materializeNewQuestionAnimationPlay();
 
-        if(clickedCorrect){
+        if(answered && clickedCorrect){
             skeleAnim.Play("correct");
         }
         else{
@@ -44,21 +51,22 @@ public class Trivia2 : MonoBehaviour
     }
 
     void materializeNewQuestionAnimationPlay(){
-        button1Anim.Play("materialize");
-        button2Anim.Play("materialize");
-        button3Anim.Play("materialize");
-        button4Anim.Play("materialize");
+        button1Anim.Play("QuestionDissapear");
+        button2Anim.Play("QuestionDissapear");
+        button3Anim.Play("QuestionDissapear");
+        button4Anim.Play("QuestionDissapear");
 
     }
 
     public void ClickedCorrect(){
+        answered = true;
         clickedCorrect = true;
     }
     public void ClickedIncorrect(){
         clickedCorrect = false;
     }
 
-    public List<Text> optionsText; //text object
+    public List<TextMeshProUGUI> optionsText; //text object
     public List<Transform> optionsTransforms = new List<Transform>();
     public List<string> choices = new List<string>();
 
@@ -89,6 +97,16 @@ public class Trivia2 : MonoBehaviour
     public GameObject multiplierText;
 
     int removedQuestions = 0;
+
+    public void randomizeButtons(){
+        Vector3 temp;
+        for (int i = 0; i < optionsTransforms.Count; i++) {
+             int rnd = Random.Range(0, optionsTransforms.Count); //random number created 
+             temp = optionsTransforms[rnd].position; //we set the currently,
+             optionsTransforms[rnd].position = optionsTransforms[i].position;
+             optionsTransforms[i].position = temp;
+         }
+    }
 /*
     void Start()
     {
