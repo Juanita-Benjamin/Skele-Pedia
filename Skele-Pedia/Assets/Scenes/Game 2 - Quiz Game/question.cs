@@ -19,4 +19,10 @@ public class question
         incorrectAnswer2 = d.incorrectAnswer2;
         incorrectAnswer3 = d.incorrectAnswer3;
     }
+    
+    public int timesCorrect; //useful to have both, for different reasons
+    public int timesIncorrect; //we want incorrects, when we want the users to know which ones he needs to work on
+    //we want the correct ones when we want to get a tally of the questions they got correct in this round
+    
+    //ideally timesCorrect only goes up for that round, but timesIncorrect would be permanently recorded
 }
