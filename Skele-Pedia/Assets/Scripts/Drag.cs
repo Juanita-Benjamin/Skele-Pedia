@@ -15,15 +15,13 @@ public class Drag : MonoBehaviour
     private Transform _toDrag;
 
     //public Transform ribCageTransfrom;
-    public GameObject objectClicked;
-    public Vector3 origPosition = new Vector3(0f, 0f, 0f);
-    Vector3 correctPosition = new Vector3(0f, 0f, 0f);
-    public Vector3 offset = new Vector3(0f, 0f, 0f);
+
+    public string theOneItsSupposedToBe;
     
     void Start()
     {
-        origPosition = transform.position;
-        //ribCageTransfrom = GameObject.Find("Ribcage").transform;
+        
+        
     }
    
     // Update is called once per frame
@@ -48,8 +46,9 @@ public class Drag : MonoBehaviour
             //if the touch phase has begun
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.CompareTag("Pelvis") || hit.collider.CompareTag("Humerus")
-                || hit.collider.CompareTag("Skull") || hit.collider.CompareTag("Ribcage"))
+                //if (hit.collider.CompareTag("Pelvis") || hit.collider.CompareTag("Humerus")
+                //|| hit.collider.CompareTag("Skull") || hit.collider.CompareTag("Ribcage"))
+                if(hit.collider.CompareTag(theOneItsSupposedToBe))
                 {
                     _toDrag = hit.transform;
                     _distance = hit.transform.position.z - Camera.main.transform.position.z; //was z not x
@@ -75,24 +74,6 @@ public class Drag : MonoBehaviour
         }
     }
     
-    //create a collider script
-    //when drag element has collided with cube, then
-    //snap into place at Vector.zero
+   
 
-    public void OnTriggerEnter(Collider other)
-    {
-        objectClicked = gameObject;
-        if (other.CompareTag("Ribcage"))
-        {
-            Debug.Log(other.name +"Trigger was hit");
-            Debug.Log(other.GetComponent<Collider>().name);
-            Debug.Log(other.GetComponent<Collider>().tag);
-
-            
-            objectClicked.transform.localPosition = correctPosition + offset; //subtracts to balance it back into place
-
-            //transform.position = new Vector3(0, 5, 0);
-        }
-        
-    }
 }
