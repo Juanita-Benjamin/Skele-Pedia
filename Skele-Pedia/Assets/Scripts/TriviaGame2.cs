@@ -18,7 +18,7 @@ public class TriviaGame2 : MonoBehaviour
     
 
     public List<Button> options = new List<Button>(); //the four buttons for multiple choice
-    public List<Text> optionsText; //their text properties nested within
+    public List<TextMeshPro> optionsText; //their text properties nested within
     public List<Transform> optionsTransforms = new List<Transform>(); // their transforms which gives us the position for easy rearanging
     
     public GameObject correctAnswer;
@@ -46,13 +46,23 @@ public class TriviaGame2 : MonoBehaviour
     int streak = 0; //this number goes up when the player gets a question correct. back to 0 when they get soemthing wrong
 
     public GameObject scoreAnim; //similar aniamtions for the ui elements
-    public int score = 0;
+    //public int score = 0;
     public GameObject multiplierText;
 
     int removedBones = 0;
 
+    public GameObject congratulations;
+    public TextMeshProUGUI yourScoreWas;
+
+    float score = 0;
+    public int rounds = 0;
+    public int maxRounds = 5;
+    public TextMeshProUGUI scoreText;
+
     void Start()
     {
+        congratulations.SetActive(false);
+        yourScoreWas.text = "";
         /* foreach (Transform child in skeleton.transform)
         {
             if (true){
@@ -139,6 +149,7 @@ public class TriviaGame2 : MonoBehaviour
 
     public void Reset()
     {
+        rounds+=1;
         removedBones++;
         Debug.Log("Reseting!");
         int correctAnswerIndex = Random.Range(0,correctBones.Count - removedBones);
@@ -173,6 +184,12 @@ public class TriviaGame2 : MonoBehaviour
         randomizeButtons(); //randomizes button order
         
         //make the new correct answer button get adjusted
+
+        if(rounds>maxRounds){
+            congratulations.SetActive(true);
+            Time.timeScale = 0f;
+            yourScoreWas.text = "Your Score was: "+score.ToString();
+        }
     }
 
     public void randomizeButtons(){
@@ -229,6 +246,7 @@ public class TriviaGame2 : MonoBehaviour
     void updateScoreText(){
         scoreAnim.GetComponent<TextMeshProUGUI>().text = score.ToString();
     }
+    
     
     
 }
