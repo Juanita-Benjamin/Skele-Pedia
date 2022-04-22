@@ -21,11 +21,24 @@ public class Trivia2 : MonoBehaviour
     public bool clickedCorrect = true;
     public bool answered = false;
 
+    public GameObject congratulations;
+    public TextMeshProUGUI yourScoreWas;
+
+    float score = 0;
+    int rounds = 0;
+    public int maxRounds = 5;
+    public TextMeshProUGUI scoreText;
+
+
+
     public void Start(){
+        congratulations.SetActive(false);
+        yourScoreWas.text = "";
         Reset();
     }
 
     public void Reset(){
+        rounds+=1;
         int currentQuestion = Random.Range(0,qList.questionList.Length) - removedQuestions;
         string temp = qList.questionList[currentQuestion].rows[0].ToString();
         QuestionText.text = temp;
@@ -44,9 +57,19 @@ public class Trivia2 : MonoBehaviour
 
         if(answered && clickedCorrect){
             skeleAnim.Play("correct");
+            score+=1;
+            scoreText.text = score.ToString();
+            clickedCorrect = false; //reset clicked correct
+            correctAnimator.Play("correct");
         }
         else{
             skeleAnim.Play("incorrect");
+        }
+
+        if(rounds>maxRounds){
+            congratulations.SetActive(true);
+            Time.timeScale = 0f;
+            yourScoreWas.text = "Your Score was: "+score.ToString();
         }
     }
 
@@ -87,13 +110,13 @@ public class Trivia2 : MonoBehaviour
 
     public GameObject animationCorrect; 
 
-    public Animator anim;
+    public Animator correctAnimator;
     public GameObject correctLogo1; //displayed when the player gets something right
 
     int streak = 0;
 
     public GameObject scoreAnim;
-    public int score = 0;
+    //public int score = 0;
     public GameObject multiplierText;
 
     int removedQuestions = 0;
